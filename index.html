@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMIX Concrete Plant - Ready-Mix Concrete Supplier | Halt Group</title>
+    <meta name="description" content="DMIX Concrete Plant - Certified ready-mix concrete supplier in Djibouti. ISO 9001 certified with quality lab. C20/25 to C40/50 concrete grades. 15,000+ m³ delivered.">
+    
+<link rel="icon" type="image/png" href="images/DMIX.png">
+    <style>
+        /* ============================================
+           RESET AND BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #D32F2F;
+            --dark-red: #B71C1C;
+            --light-red: #EF5350;
+            --accent-orange: #FF6F00;
+            --white: #FFFFFF;
+            --black: #212121;
+            --gray: #757575;
+            --light-gray: #F5F5F5;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.3rem; }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-red);
+        }
+
+        .section-title.center {
+            text-align: center;
+        }
+
+        .section-title.center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-red);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-red);
+        }
+
+        /* ============================================
+           HEADER
+           ============================================ */
+        .header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--primary-red);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero-section {
+            position: relative;
+            color: var(--white);
+            padding: 140px 0;
+            text-align: center;
+            background-image: url('images/usine.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(211, 47, 47, 0.85) 0%, rgba(183, 28, 28, 0.85) 100%);
+            z-index: 1;
+        }
+
+        .hero-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           SECTIONS
+           ============================================ */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-light {
+            background: var(--white);
+        }
+
+        .section-gray {
+            background: var(--light-gray);
+        }
+
+        .section-dark {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+            color: var(--white);
+        }
+
+        .section-dark h2, 
+        .section-dark h3,
+        .section-dark .section-title {
+            color: var(--white);
+        }
+
+        /* ============================================
+           STATS SECTION
+           ============================================ */
+        .stats-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ============================================
+           CONCRETE TYPES SECTION
+           ============================================ */
+        .concrete-types-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .type-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-red);
+        }
+
+        .type-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .type-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .type-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-red);
+            text-align: center;
+        }
+
+        .type-card > p {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .type-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .type-card li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--gray);
+        }
+
+        .type-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-red);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .type-card .btn {
+            display: block;
+            margin-top: 1.5rem;
+        }
+
+        /* ============================================
+           CERTIFICATIONS SECTION
+           ============================================ */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .cert-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .cert-badge {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-red), var(--light-red));
+            color: white;
+            font-size: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+        }
+
+        .cert-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .cert-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* ============================================
+           FACILITY SECTION
+           ============================================ */
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .facility-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .facility-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-red);
+            color: white;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .facility-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-red);
+        }
+
+        .facility-specs {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+        }
+
+        .facility-specs li {
+            padding: 0.75rem 0;
+            color: var(--gray);
+            border-bottom: 1px solid #eee;
+        }
+
+        .facility-specs li:last-child {
+            border-bottom: none;
+        }
+
+        .facility-specs strong {
+            color: var(--black);
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        /* ============================================
+           PROCESS SECTION
+           ============================================ */
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step:not(:last-child):after {
+            content: '→';
+            position: absolute;
+            right: -0.8rem;
+            top: 30px;
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-red), var(--light-red));
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .process-step h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .process-step p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        /* ============================================
+           PROJECTS SECTION
+           ============================================ */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            position: relative;
+            padding-top: 66%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .project-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .project-info p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--gray);
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .project-volume {
+            color: var(--primary-red);
+            font-weight: 700;
+        }
+
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #E0E0E0;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-red);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 1024px) {
+            .concrete-types-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .facility-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-timeline {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .concrete-types-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-timeline {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step:after {
+                display: none;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="images/DMIX.png" alt="D-MIX Concrete Plant">
+            </a>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#concrete-types">Products</a>
+                <a href="#facility">Facility</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Premium Ready-Mix Concrete</h1>
+            <p class="hero-subtitle">
+                ISO 9001 certified concrete plant delivering quality concrete from C20/25 to C40/50. 
+                On-site lab testing and 98% on-time delivery across Djibouti.
+            </p>
+            <div class="hero-buttons">
+                <a href="#concrete-types" class="btn btn-primary">View Products</a>
+                <a href="#contact" class="btn btn-secondary">Get Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section section-dark">
+    <div class="container">
+        <h2 class="section-title center">Our Track Record</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">15,000+</div>
+                <div class="stat-label">m³ Delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">On-Time Delivery</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Mixer Trucks</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section-light">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <h2 class="section-title">About D-MIX Concrete Plant</h2>
+                <p>
+                    D-MIX is Djibouti's leading ready-mix concrete supplier, operating as a subsidiary 
+                    of Halt Group since 2007. Our state-of-the-art batching plant produces certified 
+                    concrete to international standards.
+                </p>
+                <p>
+                    With an automated production capacity of 60 m³/hour and our own quality control 
+                    laboratory, we ensure every batch meets specifications. Our fleet of 15 modern 
+                    mixer trucks guarantees fresh concrete delivery across Djibouti.
+                </p>
+                <p>
+                    We serve major infrastructure, commercial, and residential projects with concrete 
+                    grades from C20/25 for general construction to C40/50 for specialized applications.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="images/usineR.jpg" alt="D-MIX Plant">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONCRETE TYPES SECTION -->
+<section id="concrete-types" class="section-gray">
+    <div class="container">
+        <h2 class="section-title center">Our Concrete Solutions</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
+            From standard construction to specialized high-performance applications
+        </p>
+        <div class="concrete-types-grid">
+            <div class="type-card">
+                <div class="type-icon">🏗️</div>
+                <h3>Standard Concrete</h3>
+                <p>For general construction needs</p>
+                <ul>
+                    <li><strong>C20/25</strong> - General construction</li>
+                    <li><strong>C25/30</strong> - Structural use</li>
+                    <li><strong>C30/37</strong> - Heavy-duty applications</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Get Quote</a>
+            </div>
+            
+            <div class="type-card">
+                <div class="type-icon">⚡</div>
+                <h3>High-Performance</h3>
+                <p>For demanding projects</p>
+                <ul>
+                    <li><strong>C35/45</strong> - Infrastructure projects</li>
+                    <li><strong>C40/50</strong> - Marine structures</li>
+                    <li><strong>Self-compacting</strong> - Complex forms</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Get Quote</a>
+            </div>
+            
+            <div class="type-card">
+                <div class="type-icon">🎨</div>
+                <h3>Specialized Mix</h3>
+                <p>Custom formulations</p>
+                <ul>
+                    <li><strong>Fiber-reinforced</strong> - Enhanced durability</li>
+                    <li><strong>Colored concrete</strong> - Architectural</li>
+                    <li><strong>Custom formulations</strong> - Your specs</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Get Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS SECTION -->
+<section class="section-light">
+    <div class="container">
+        <h2 class="section-title center">Quality Certifications</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
+            Our concrete meets international quality standards
+        </p>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-badge">✓</div>
+                <h3>ISO 9001</h3>
+                <p>Quality Management Certified</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge">🔬</div>
+                <h3>Lab Tested</h3>
+                <p>On-site Quality Control Laboratory</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge">📊</div>
+                <h3>EN 206 Standards</h3>
+                <p>European Concrete Standards</p>
+            </div>
+            <div class="cert-card">
+                <div class="cert-badge">🏆</div>
+                <h3>Best Practices</h3>
+                <p>Industry Leading Quality</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OUR FACILITY SECTION -->
+<section id="facility" class="section-gray">
+    <div class="container">
+        <h2 class="section-title center">State-of-the-Art Facility</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
+            Modern equipment and technology for consistent quality
+        </p>
+        <div class="facility-grid">
+            <div class="facility-card">
+                <div class="facility-icon">🏭</div>
+                <h3>Automated Batching Plant</h3>
+                <p>Computer-controlled mixing system ensures precise formulations every time</p>
+                <ul class="facility-specs">
+                    <li><strong>Capacity:</strong> 60 m³/hour</li>
+                    <li><strong>Control:</strong> Fully automated</li>
+                    <li><strong>Accuracy:</strong> ±1% tolerance</li>
+                    <li><strong>Operation:</strong> 24/7 availability</li>
+                </ul>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">🔬</div>
+                <h3>Quality Control Laboratory</h3>
+                <p>On-site testing facility with certified equipment</p>
+                <ul class="facility-specs">
+                    <li><strong>Testing:</strong> Compression, slump, air</li>
+                    <li><strong>Equipment:</strong> Certified instruments</li>
+                    <li><strong>Standards:</strong> EN 206 compliant</li>
+                    <li><strong>Reports:</strong> Full documentation</li>
+                </ul>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">🚛</div>
+                <h3>Modern Fleet</h3>
+                <p>15 mixer trucks with GPS tracking and temperature monitoring</p>
+                <ul class="facility-specs">
+                    <li><strong>Fleet Size:</strong> 15 trucks</li>
+                    <li><strong>Capacity:</strong> 6-8 m³ per truck</li>
+                    <li><strong>Tracking:</strong> Real-time GPS</li>
+                    <li><strong>Monitoring:</strong> Temperature sensors</li>
+                </ul>
+            </div>
+            
+            <div class="facility-card">
+                <div class="facility-icon">📦</div>
+                <h3>Material Storage</h3>
+                <p>Climate-controlled silos for optimal material preservation</p>
+                <ul class="facility-specs">
+                    <li><strong>Cement:</strong> 200 tons capacity</li>
+                    <li><strong>Aggregates:</strong> 500 tons capacity</li>
+                    <li><strong>Protection:</strong> Weather-sealed</li>
+                    <li><strong>Quality:</strong> Moisture controlled</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTION PROCESS SECTION -->
+<section class="section-light">
+    <div class="container">
+        <h2 class="section-title center">From Plant to Site</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
+            Our proven 6-step process ensures quality and on-time delivery
+        </p>
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Order & Spec</h4>
+                <p>Technical requirements analysis</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Mix Design</h4>
+                <p>Lab formulation</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Quality Control</h4>
+                <p>Testing standards</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Production</h4>
+                <p>Automated batching</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <h4>Delivery</h4>
+                <p>On-time to site</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">6</div>
+                <h4>Support</h4>
+                <p>Technical assistance</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REFERENCE PROJECTS SECTION -->
+<section class="section-gray">
+    <div class="container">
+        <h2 class="section-title center">Major Projects</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
+            Concrete supplied for key infrastructure across Djibouti
+        </p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Port construction project">
+                    <span class="project-tag">Infrastructure</span>
+                </div>
+                <div class="project-info">
+                    <h3>Djibouti Port Extension</h3>
+                    <p>High-performance marine concrete for port development</p>
+                    <div class="project-meta">
+                        <span>📍 Djibouti Port</span>
+                        <span class="project-volume">5,000 m³</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Highway construction">
+                    <span class="project-tag">Transportation</span>
+                </div>
+                <div class="project-info">
+                    <h3>National Highway Project</h3>
+                    <p>Durable concrete for heavy traffic road construction</p>
+                    <div class="project-meta">
+                        <span>📍 National Road</span>
+                        <span class="project-volume">8,000 m³</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Commercial building construction">
+                    <span class="project-tag">Commercial</span>
+                </div>
+                <div class="project-info">
+                    <h3>Commercial Complex</h3>
+                    <p>Structural concrete for multi-story building</p>
+                    <div class="project-meta">
+                        <span>📍 Djibouti City</span>
+                        <span class="project-volume">3,500 m³</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80" alt="Industrial plant construction">
+                    <span class="project-tag">Industrial</span>
+                </div>
+                <div class="project-info">
+                    <h3>Industrial Facility</h3>
+                    <p>Heavy-duty concrete for manufacturing plant</p>
+                    <div class="project-meta">
+                        <span>📍 Industrial Zone</span>
+                        <span class="project-volume">2,000 m³</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Residential construction">
+                    <span class="project-tag">Residential</span>
+                </div>
+                <div class="project-info">
+                    <h3>Residential Development</h3>
+                    <p>Quality concrete for housing project</p>
+                    <div class="project-meta">
+                        <span>📍 Residential Area</span>
+                        <span class="project-volume">4,500 m³</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1474302770737-173ee21bab63?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80" alt="Airport runway construction">
+                    <span class="project-tag">Aviation</span>
+                </div>
+                <div class="project-info">
+                    <h3>Airport Runway Expansion</h3>
+                    <p>High-strength concrete for aviation infrastructure</p>
+                    <div class="project-meta">
+                        <span>📍 Airport</span>
+                        <span class="project-volume">6,000 m³</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section-light">
+    <div class="container">
+        <h2 class="section-title center">Request a Quote</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
+            Tell us about your project and we'll provide a detailed quotation within 24 hours
+        </p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="company">Company Name *</label>
+                <input type="text" id="company" name="company" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Contact Person *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="concrete-type">Concrete Grade Required *</label>
+                <select id="concrete-type" name="concrete-type" required>
+                    <option value="">Select grade...</option>
+                    <option value="C20/25">C20/25 - General construction</option>
+                    <option value="C25/30">C25/30 - Structural use</option>
+                    <option value="C30/37">C30/37 - Heavy-duty applications</option>
+                    <option value="C35/45">C35/45 - Infrastructure projects</option>
+                    <option value="C40/50">C40/50 - Marine structures</option>
+                    <option value="self-compacting">Self-compacting concrete</option>
+                    <option value="custom">Custom formulation</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="volume">Estimated Volume (m³) *</label>
+                <input type="number" id="volume" name="volume" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="delivery-date">Required Delivery Date</label>
+                <input type="date" id="delivery-date" name="delivery-date">
+            </div>
+            <div class="form-group">
+                <label for="project">Project Details</label>
+                <textarea id="project" name="project" rows="4" placeholder="Tell us about your project requirements..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <img src="images/DMIX.png" alt="D-MIX" style="height: 40px; margin-bottom: 1rem;">
+                <h3>D-MIX Concrete Plant</h3>
+                <p>Premium ready-mix concrete supplier in Djibouti. Part of Halt Group since 2007.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#concrete-types">Products</a></p>
+                <p><a href="#facility">Our Facility</a></p>
+                <p><a href="#contact">Get Quote</a></p>
+            </div>
+            <div>
+                <h3>Products</h3>
+                <p><a href="#concrete-types">Standard Concrete (C20-C30)</a></p>
+                <p><a href="#concrete-types">High-Performance (C35-C40)</a></p>
+                <p><a href="#concrete-types">Specialized Mix</a></p>
+                <p><a href="#contact">Custom Formulations</a></p>
+            </div>
+            <div>
+                <h3>Contact Info</h3>
+                <p>Halt Office Building<br>Heron, Djibouti</p>
+                <p>Phone: +253 21 35 44 14</p>
+                <p>Email: dmix@haltgroup-djibouti.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 D-MIX Concrete Plant - Halt Group. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Form validation
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        
+        // Simple validation
+        let isValid = true;
+        const requiredFields = this.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = 'red';
+            } else {
+                field.style.borderColor = '#E0E0E0';
+            }
+        });
+        
+        if (isValid) {
+            alert('Thank you for your request! We will contact you within 24 hours.');
+            this.reset();
+        } else {
+            alert('Please fill in all required fields.');
+        }
+    });
+}
+
+// Add animation on scroll
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.type-card, .cert-card, .facility-card, .project-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+</script>
+
+</body>
+</html>
