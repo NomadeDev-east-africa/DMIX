@@ -1,0 +1,25 @@
+# Robots.txt pour DMIX Concrete Plant
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+
+Sitemap: https://dmix.haltgroup-djibouti.com/sitemap.xml
+Sitemap: https://dmix.haltgroup-djibouti.com/sitemap_index.xml
+
+# Crawl-delay: 10 (optionnel si vous avez beaucoup de trafic)
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
