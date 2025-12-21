@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMIX Concrete Plant - Premium Ready-Mix Concrete Supplier | Halt Group Djibouti</title>
-    <meta name="description" content="DMIX Concrete Plant - ISO 9001 certified ready-mix concrete supplier in Djibouti. High-quality concrete from C20/25 to C40/50. Delivered 15,000+ m³ for major projects including Heramous Residence, Grand Bara Solar, and Mall PK 12.">
-    <meta name="keywords" content="ready-mix concrete, concrete supplier Djibouti, ISO 9001 concrete, C40/50 concrete, Halt Group, Heramous Residence, Grand Bara Solar, Mall PK 12">
-    <meta name="author" content="Halt Group">
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-<link rel="icon" type="image/png" href="images/DMIX.png">
+    <meta name="description" content="DMIX Concrete Plant - ISO 9001 certified ready-mix concrete supplier in Djibouti. High-quality concrete from C20/25 to C40/50. Delivered 15,000+ m³ for major projects.">
+    <link rel="icon" type="image/png" href="images/DMIX.png">
+    
+    <!-- Google Fonts - Bold Industrial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         /* ============================================
            RESET AND BASE STYLES
@@ -31,7 +34,7 @@
         }
 
         body {
-            font-family: 'Open Sans', Arial, sans-serif;
+            font-family: 'Work Sans', sans-serif;
             line-height: 1.6;
             color: var(--black);
             background-color: var(--white);
@@ -49,16 +52,17 @@
            TYPOGRAPHY
            ============================================ */
         h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
             line-height: 1.2;
             margin-bottom: 1rem;
             color: var(--black);
         }
 
-        h1 { font-size: 3rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 1.8rem; }
-        h4 { font-size: 1.3rem; }
+        h1 { font-size: 4rem; letter-spacing: -2px; }
+        h2 { font-size: 3rem; letter-spacing: -1px; }
+        h3 { font-size: 2rem; }
+        h4 { font-size: 1.5rem; }
 
         p {
             margin-bottom: 1rem;
@@ -67,8 +71,8 @@
 
         .section-title {
             position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 2rem;
+            padding-bottom: 20px;
+            margin-bottom: 3rem;
         }
 
         .section-title:after {
@@ -76,9 +80,10 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-red);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-red), var(--accent-orange));
+            border-radius: 5px;
         }
 
         .section-title.center {
@@ -95,52 +100,136 @@
         }
 
         /* ============================================
+           ANIMATIONS
+           ============================================ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        /* ============================================
            BUTTONS
            ============================================ */
         .btn {
             display: inline-block;
-            padding: 14px 32px;
-            border-radius: 6px;
+            padding: 16px 40px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             text-align: center;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
             border: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover:before {
+            left: 100%;
         }
 
         .btn-primary {
-            background: var(--primary-red);
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
             color: var(--white);
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
         }
 
         .btn-primary:hover {
-            background: var(--dark-red);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
             color: var(--white);
-            border: 2px solid var(--white);
+            border: 3px solid var(--white);
         }
 
         .btn-secondary:hover {
             background: var(--white);
             color: var(--primary-red);
+            transform: translateY(-3px);
         }
 
         /* ============================================
-           HEADER
+           HEADER - Sticky with Glass Effect
            ============================================ */
         .header {
-            background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
         }
 
         .header-content {
@@ -153,6 +242,11 @@
         .logo {
             display: flex;
             align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .logo img {
@@ -162,14 +256,31 @@
 
         .nav {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .nav a {
             color: var(--black);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover:after {
+            width: 100%;
         }
 
         .nav a:hover {
@@ -177,475 +288,585 @@
         }
 
         /* ============================================
-           HERO SECTION - MODIFIÉE POUR VISIBILITÉ
+           HERO SLIDER - Dynamic Image Carousel
            ============================================ */
-        .hero-section {
+        .hero-slider {
             position: relative;
-            color: var(--white);
-            padding: 140px 0;
-            text-align: center;
-            background-image: url('dmix-image/usineR.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
+            height: 100vh;
+            min-height: 700px;
+            overflow: hidden;
         }
 
-        .hero-section:before {
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, rgba(211, 47, 47, 0.7), rgba(0, 0, 0, 0.5));
             z-index: 1;
         }
 
-        .hero-section .container {
-            position: relative;
-            z-index: 2;
+        /* Slide 1 */
+        .slide-1 {
+            background-image: url('dmix-image/usineR.jpeg');
+        }
+
+        /* Slide 2 */
+        .slide-2 {
+            background-image: url('dmix-image/back1.jpeg');
+        }
+
+        /* Slide 3 */
+        .slide-3 {
+            background-image: url('dmix-image/back2.jpeg');
         }
 
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
         }
 
-        .hero-title {
-            font-size: 3.5rem;
+        .hero-text {
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero-text h1 {
+            color: var(--white);
+            font-size: 5rem;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
         }
 
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
+        .hero-text .tagline {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
             opacity: 0.95;
-            line-height: 1.6;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .hero-text .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent-orange);
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero-stat .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
-            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        /* Slider Navigation */
+        .slider-nav {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 15px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .slider-dot.active {
+            background: var(--white);
+            transform: scale(1.3);
+            border-color: var(--accent-orange);
+        }
+
+        .slider-dot:hover {
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Slider Arrows */
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .slider-arrow:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--white);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slider-arrow.prev {
+            left: 30px;
+        }
+
+        .slider-arrow.next {
+            right: 30px;
+        }
+
+        /* ============================================
+           STATS SECTION - Animated Counters
+           ============================================ */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect fill="rgba(255,255,255,0.05)" width="50" height="50"/></svg>');
+            background-size: 50px 50px;
+            opacity: 0.1;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-orange);
+            margin-bottom: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
         }
 
         /* ============================================
            SECTIONS
            ============================================ */
         section {
-            padding: 80px 0;
-        }
-
-        .section-light {
-            background: var(--white);
-        }
-
-        .section-gray {
-            background: var(--light-gray);
+            padding: 100px 0;
+            position: relative;
         }
 
         .section-dark {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+            background: var(--black);
             color: var(--white);
         }
 
-        .section-dark h2, 
+        .section-dark h2,
         .section-dark h3,
-        .section-dark .section-title {
+        .section-dark p {
             color: var(--white);
         }
 
-        .section-dark .section-title:after {
-            background-color: var(--accent-orange);
+        .section-light {
+            background: var(--light-gray);
         }
 
         /* ============================================
-           STATS SECTION
+           ABOUT SECTION - With Parallax Effect
            ============================================ */
-        .stats-section {
-            padding: 80px 0;
-            text-align: center;
+        #about {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-            margin-top: 3rem;
+        #about:before {
+            content: 'DMIX';
+            position: absolute;
+            top: 50%;
+            right: -100px;
+            transform: translateY(-50%);
+            font-size: 20rem;
+            font-weight: 900;
+            color: rgba(211, 47, 47, 0.03);
+            font-family: 'Montserrat', sans-serif;
+            z-index: 0;
+            pointer-events: none;
         }
 
-        .stat-item {
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--accent-orange);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.9);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* ============================================
-           ABOUT SECTION
-           ============================================ */
-        .about-grid {
+        .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .about-features {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 30px rgba(211, 47, 47, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            min-width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-red), var(--accent-orange));
+            color: var(--white);
+            border-radius: 12px;
+        }
+
+        .feature-text h4 {
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-text p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--gray);
         }
 
         .about-image {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            position: relative;
         }
 
         .about-image img {
             width: 100%;
-            height: auto;
-            display: block;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05) rotate(2deg);
         }
 
         /* ============================================
-           CONCRETE TYPES SECTION
+           CONCRETE TYPES - Grid with Hover Effects
            ============================================ */
-        .concrete-types-grid {
+        .types-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
 
         .type-card {
             background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--primary-red);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .type-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-red), var(--accent-orange));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
         }
 
         .type-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(211, 47, 47, 0.2);
+        }
+
+        .type-card:hover:before {
+            transform: scaleX(1);
+        }
+
+        .type-header {
+            background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
         }
 
         .type-icon {
             font-size: 3rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            color: var(--primary-red);
-        }
-
-        .type-card h3 {
             margin-bottom: 1rem;
-            color: var(--primary-red);
-            text-align: center;
+            display: inline-block;
+            animation: pulse 2s infinite;
         }
 
-        .type-card > p {
-            text-align: center;
-            color: var(--gray);
+        .type-header h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .type-grade {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+
+        .type-body {
+            padding: 2rem;
+        }
+
+        .type-body p {
             margin-bottom: 1.5rem;
         }
 
-        .type-card ul {
+        .type-features {
             list-style: none;
             padding: 0;
-            margin: 1.5rem 0;
         }
 
-        .type-card li {
-            padding: 0.75rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: var(--gray);
-        }
-
-        .type-card li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary-red);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .type-card .btn {
-            display: block;
-            margin-top: 1.5rem;
-        }
-
-        /* ============================================
-           CERTIFICATIONS SECTION
-           ============================================ */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .cert-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-
-        .cert-badge {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-red), var(--light-red));
-            color: white;
-            font-size: 2.5rem;
+        .type-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--light-gray);
             display: flex;
             align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
+            gap: 0.5rem;
         }
 
-        .cert-card h3 {
+        .type-features li:before {
+            content: '✓';
+            color: var(--primary-red);
+            font-weight: bold;
             font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--black);
-        }
-
-        .cert-card p {
-            font-size: 0.9rem;
-            color: var(--gray);
         }
 
         /* ============================================
-           FACILITY SECTION
+           PROJECTS - Overlay Effect Gallery
            ============================================ */
-        .facility-grid {
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2.5rem;
             margin-top: 3rem;
         }
 
-        .facility-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-
-        .facility-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-        }
-
-        .facility-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-red);
-            color: white;
-            font-size: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
-
-        .facility-card h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-red);
-        }
-
-        .facility-specs {
-            list-style: none;
-            padding: 0;
-            margin-top: 1rem;
-        }
-
-        .facility-specs li {
-            padding: 0.75rem 0;
-            color: var(--gray);
-            border-bottom: 1px solid #eee;
-        }
-
-        .facility-specs li:last-child {
-            border-bottom: none;
-        }
-
-        .facility-specs strong {
-            color: var(--black);
-            display: inline-block;
-            min-width: 120px;
-        }
-
-        /* ============================================
-           PROCESS SECTION
-           ============================================ */
-        .process-timeline {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 1rem;
-            margin-top: 3rem;
-        }
-
-        .process-step {
-            text-align: center;
-            position: relative;
-        }
-
-        .process-step:not(:last-child):after {
-            content: '→';
-            position: absolute;
-            right: -0.8rem;
-            top: 30px;
-            color: var(--primary-red);
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .step-number {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-red), var(--light-red));
-            color: white;
-            font-size: 1.8rem;
-            font-weight: 700;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-        }
-
-        .process-step h4 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            color: var(--black);
-        }
-
-        .process-step p {
-            font-size: 0.85rem;
-            color: var(--gray);
-        }
-
-        /* ============================================
-           PROJECTS SECTION
-           ============================================ */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
         .project-card {
-            background: white;
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
+            background: var(--white);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
         .project-image {
             position: relative;
-            padding-top: 66%;
             overflow: hidden;
-            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            height: 280px;
         }
 
         .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-image:before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .project-card:hover .project-image:before {
+            opacity: 1;
         }
 
         .project-tag {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--primary-red);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
+            top: 20px;
+            right: 20px;
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
             font-size: 0.85rem;
-            font-weight: 600;
-            z-index: 10;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
         }
 
         .project-info {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
         .project-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             color: var(--black);
         }
 
         .project-info p {
             color: var(--gray);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .project-meta {
             display: flex;
-            justify-content: space-between;
+            gap: 1.5rem;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 2px solid var(--light-gray);
             font-size: 0.9rem;
             color: var(--gray);
-            border-top: 1px solid #eee;
-            padding-top: 1rem;
         }
 
         .project-volume {
-            color: var(--primary-red);
             font-weight: 700;
+            color: var(--primary-red);
         }
 
-        /* Gallery Styles */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            margin: 1.5rem 0;
+            margin-bottom: 1.5rem;
         }
 
         .gallery-image {
             width: 100%;
             height: 150px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
             transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
         .gallery-image:hover {
@@ -653,11 +874,15 @@
         }
 
         /* ============================================
-           CONTACT SECTION
+           CONTACT FORM - Modern Design
            ============================================ */
         .contact-form {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -672,27 +897,24 @@
         }
 
         .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 15px 20px;
             border: 2px solid #E0E0E0;
-            border-radius: 6px;
-            font-family: inherit;
+            border-radius: 10px;
             font-size: 1rem;
-            transition: border-color 0.3s ease;
+            font-family: 'Work Sans', sans-serif;
+            transition: all 0.3s ease;
         }
 
         .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-red);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
+            box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+            transform: translateY(-2px);
         }
 
         /* ============================================
@@ -706,7 +928,7 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 3rem;
             margin-bottom: 3rem;
         }
@@ -714,111 +936,59 @@
         .footer h3 {
             color: var(--white);
             margin-bottom: 1.5rem;
-            font-size: 1.3rem;
         }
 
         .footer p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .footer a {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer a:hover {
-            color: var(--white);
+            color: var(--accent-orange);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
             text-align: center;
-            color: rgba(255,255,255,0.6);
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         /* ============================================
-           RESPONSIVE DESIGN
+           RESPONSIVE
            ============================================ */
-        @media (max-width: 1024px) {
-            .concrete-types-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .facility-grid,
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-timeline {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero-text h1 {
+                font-size: 3rem;
             }
             
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+            .hero-text .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
             }
             
-            .stat-number {
-                font-size: 2.5rem;
-            }
-            
-            .concrete-types-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cert-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-timeline {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-step:after {
-                display: none;
-            }
-            
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .nav {
-                display: none;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
             .hero-buttons {
                 flex-direction: column;
             }
             
-            .cert-grid {
+            .about-content {
                 grid-template-columns: 1fr;
             }
             
-            .footer-grid {
-                grid-template-columns: 1fr;
+            .nav {
+                display: none;
+            }
+            
+            .slider-arrow {
+                display: none;
             }
         }
     </style>
@@ -826,297 +996,222 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" id="header">
     <div class="container">
         <div class="header-content">
-            <a href="#" class="logo">
-                <img src="images/DMIX.png" alt="D-MIX Concrete Plant - Premium Ready-Mix Concrete Supplier in Djibouti">
-            </a>
+            <div class="logo">
+                <img src="images/DMIX.png" alt="D-MIX Concrete Plant Logo">
+            </div>
             <nav class="nav">
                 <a href="#about">About</a>
                 <a href="#concrete-types">Products</a>
                 <a href="#projects">Projects</a>
-                <a href="#facility">Facility</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
     </div>
 </header>
 
-<!-- HERO SECTION - MODIFIÉE POUR VISIBILITÉ -->
-<section class="hero-section">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-title">Premium Ready-Mix Concrete</h1>
-            <p class="hero-subtitle">
-                ISO 9001 certified concrete plant delivering quality concrete from C20/25 to C40/50. 
-                On-site lab testing and 98% on-time delivery across Djibouti.
-            </p>
+<!-- HERO SLIDER SECTION -->
+<section class="hero-slider">
+    <div class="slide slide-1 active"></div>
+    <div class="slide slide-2"></div>
+    <div class="slide slide-3"></div>
+    
+    <div class="slider-arrow prev" onclick="changeSlide(-1)">‹</div>
+    <div class="slider-arrow next" onclick="changeSlide(1)">›</div>
+    
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Premium Ready-Mix Concrete</h1>
+            <p class="tagline">Building Djibouti's Future with ISO 9001 Certified Excellence</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="number">15,000+</span>
+                    <span class="label">m³ Delivered</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="number">50+</span>
+                    <span class="label">Major Projects</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="number">ISO 9001</span>
+                    <span class="label">Certified</span>
+                </div>
+            </div>
+            
             <div class="hero-buttons">
-                <a href="#concrete-types" class="btn btn-primary">View Products</a>
+                <a href="#concrete-types" class="btn btn-primary">Our Products</a>
                 <a href="#contact" class="btn btn-secondary">Get Quote</a>
             </div>
         </div>
     </div>
+    
+    <div class="slider-nav">
+        <div class="slider-dot active" onclick="goToSlide(0)"></div>
+        <div class="slider-dot" onclick="goToSlide(1)"></div>
+        <div class="slider-dot" onclick="goToSlide(2)"></div>
+    </div>
 </section>
 
 <!-- STATS SECTION -->
-<section class="stats-section section-dark">
+<section class="stats-section">
     <div class="container">
-        <h2 class="section-title center">Our Track Record</h2>
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">15,000+</div>
-                <div class="stat-label">m³ Delivered</div>
+                <span class="stat-number" data-target="17">0</span>
+                <span class="stat-label">Years Experience</span>
             </div>
             <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">On-Time Delivery</div>
+                <span class="stat-number" data-target="15000">0</span>
+                <span class="stat-label">m³ Delivered</span>
             </div>
             <div class="stat-item">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">Projects Completed</div>
+                <span class="stat-number" data-target="50">0</span>
+                <span class="stat-label">Major Projects</span>
             </div>
             <div class="stat-item">
-                <div class="stat-number">15</div>
-                <div class="stat-label">Mixer Trucks</div>
+                <span class="stat-number" data-target="100">0</span>
+                <span class="stat-label">% Quality</span>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ABOUT SECTION -->
-<section id="about" class="section-light">
+<section id="about">
     <div class="container">
-        <div class="about-grid">
-            <div class="about-content">
-                <h2 class="section-title">About D-MIX Concrete Plant</h2>
-                <p>
-                    D-MIX is Djibouti's leading ready-mix concrete supplier, operating as a subsidiary 
-                    of Halt Group since 2007. Our state-of-the-art batching plant produces certified 
-                    concrete to international standards.
-                </p>
-                <p>
-                    With an automated production capacity of 60 m³/hour and our own quality control 
-                    laboratory, we ensure every batch meets specifications. Our fleet of 15 modern 
-                    mixer trucks guarantees fresh concrete delivery across Djibouti.
-                </p>
-                <p>
-                    We serve major infrastructure, commercial, and residential projects with concrete 
-                    grades from C20/25 for general construction to C40/50 for specialized applications.
-                </p>
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">Concrete Excellence Since 2007</h2>
+                <p>D-MIX Concrete Plant is Djibouti's premier ready-mix concrete supplier, part of the renowned Halt Group. With over 17 years of experience, we deliver ISO 9001 certified concrete for major construction projects across the country.</p>
+                
+                <p>Our state-of-the-art facility produces high-quality concrete grades from C20/25 to C40/50, serving residential, commercial, industrial, and infrastructure projects with precision and reliability.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🏭</div>
+                        <div class="feature-text">
+                            <h4>Modern Facility</h4>
+                            <p>State-of-the-art batching plant with advanced quality control</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-text">
+                            <h4>ISO 9001 Certified</h4>
+                            <p>International quality standards for every batch</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🚛</div>
+                        <div class="feature-text">
+                            <h4>Reliable Delivery</h4>
+                            <p>On-time delivery with modern fleet of mixer trucks</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div class="about-image">
-                <img src="dmix-image/cratere.jpeg" alt="D-MIX Concrete Plant Facility in Djibouti">
+                <img src="dmix-image/usineR.jpeg" alt="D-MIX Concrete Plant Facility">
             </div>
         </div>
     </div>
 </section>
 
 <!-- CONCRETE TYPES SECTION -->
-<section id="concrete-types" class="section-gray">
+<section id="concrete-types" class="section-light">
     <div class="container">
-        <h2 class="section-title center">Our Concrete Solutions</h2>
-        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
-            From standard construction to specialized high-performance applications
+        <h2 class="section-title center">Our Concrete Products</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem; color: var(--gray); font-size: 1.1rem;">
+            From standard to high-performance concrete, we provide the perfect mix for every construction need
         </p>
-        <div class="concrete-types-grid">
+        
+        <div class="types-grid">
+            <!-- Standard Concrete -->
             <div class="type-card">
-                <div class="type-icon">🏗️</div>
-                <h3>Standard Concrete</h3>
-                <p>For general construction needs</p>
-                <ul>
-                    <li><strong>C20/25</strong> - General construction</li>
-                    <li><strong>C25/30</strong> - Structural use</li>
-                    <li><strong>C30/37</strong> - Heavy-duty applications</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary">Get Quote</a>
+                <div class="type-header">
+                    <div class="type-icon">🏗️</div>
+                    <h3>Standard Concrete</h3>
+                    <div class="type-grade">C20/25 - C25/30</div>
+                </div>
+                <div class="type-body">
+                    <p>Perfect for general construction, foundations, and non-structural elements.</p>
+                    <ul class="type-features">
+                        <li>Residential construction</li>
+                        <li>Foundations & slabs</li>
+                        <li>Non-load bearing walls</li>
+                        <li>General purpose use</li>
+                    </ul>
+                </div>
             </div>
-            
+
+            <!-- Structural Concrete -->
             <div class="type-card">
-                <div class="type-icon">⚡</div>
-                <h3>High-Performance</h3>
-                <p>For demanding projects</p>
-                <ul>
-                    <li><strong>C35/45</strong> - Infrastructure projects</li>
-                    <li><strong>C40/50</strong> - Marine structures</li>
-                    <li><strong>Self-compacting</strong> - Complex forms</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary">Get Quote</a>
+                <div class="type-header">
+                    <div class="type-icon">🏢</div>
+                    <h3>Structural Concrete</h3>
+                    <div class="type-grade">C30/37 - C35/45</div>
+                </div>
+                <div class="type-body">
+                    <p>High-strength concrete for commercial buildings and infrastructure projects.</p>
+                    <ul class="type-features">
+                        <li>Commercial buildings</li>
+                        <li>Multi-story structures</li>
+                        <li>Bridges & highways</li>
+                        <li>Heavy-duty applications</li>
+                    </ul>
+                </div>
             </div>
-            
+
+            <!-- High-Performance Concrete -->
             <div class="type-card">
-                <div class="type-icon">🎨</div>
-                <h3>Specialized Mix</h3>
-                <p>Custom formulations</p>
-                <ul>
-                    <li><strong>Fiber-reinforced</strong> - Enhanced durability</li>
-                    <li><strong>Colored concrete</strong> - Architectural</li>
-                    <li><strong>Custom formulations</strong> - Your specs</li>
-                </ul>
-                <a href="#contact" class="btn btn-primary">Get Quote</a>
+                <div class="type-header">
+                    <div class="type-icon">⚡</div>
+                    <h3>High-Performance</h3>
+                    <div class="type-grade">C40/50</div>
+                </div>
+                <div class="type-body">
+                    <p>Premium concrete for demanding applications requiring exceptional strength.</p>
+                    <ul class="type-features">
+                        <li>Marine structures</li>
+                        <li>Industrial facilities</li>
+                        <li>Critical infrastructure</li>
+                        <li>Special applications</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CERTIFICATIONS SECTION -->
-<section class="section-light">
+<!-- PROJECTS SECTION -->
+<section id="projects">
     <div class="container">
-        <h2 class="section-title center">Quality Certifications</h2>
-        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
-            Our concrete meets international quality standards
+        <h2 class="section-title center">Featured Projects</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem; color: var(--gray); font-size: 1.1rem;">
+            Proud to supply concrete for Djibouti's landmark construction projects
         </p>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <div class="cert-badge">✓</div>
-                <h3>ISO 9001</h3>
-                <p>Quality Management Certified</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge">🔬</div>
-                <h3>Lab Tested</h3>
-                <p>On-site Quality Control Laboratory</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge">📊</div>
-                <h3>EN 206 Standards</h3>
-                <p>European Concrete Standards</p>
-            </div>
-            <div class="cert-card">
-                <div class="cert-badge">🏆</div>
-                <h3>Best Practices</h3>
-                <p>Industry Leading Quality</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- OUR FACILITY SECTION -->
-<section id="facility" class="section-gray">
-    <div class="container">
-        <h2 class="section-title center">State-of-the-Art Facility</h2>
-        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
-            Modern equipment and technology for consistent quality
-        </p>
-        <div class="facility-grid">
-            <div class="facility-card">
-                <div class="facility-icon">🏭</div>
-                <h3>Automated Batching Plant</h3>
-                <p>Computer-controlled mixing system ensures precise formulations every time</p>
-                <ul class="facility-specs">
-                    <li><strong>Capacity:</strong> 60 m³/hour</li>
-                    <li><strong>Control:</strong> Fully automated</li>
-                    <li><strong>Accuracy:</strong> ±1% tolerance</li>
-                    <li><strong>Operation:</strong> 24/7 availability</li>
-                </ul>
-            </div>
-            
-            <div class="facility-card">
-                <div class="facility-icon">🔬</div>
-                <h3>Quality Control Laboratory</h3>
-                <p>On-site testing facility with certified equipment</p>
-                <ul class="facility-specs">
-                    <li><strong>Testing:</strong> Compression, slump, air</li>
-                    <li><strong>Equipment:</strong> Certified instruments</li>
-                    <li><strong>Standards:</strong> EN 206 compliant</li>
-                    <li><strong>Reports:</strong> Full documentation</li>
-                </ul>
-            </div>
-            
-            <div class="facility-card">
-                <div class="facility-icon">🚛</div>
-                <h3>Modern Fleet</h3>
-                <p>15 mixer trucks with GPS tracking and temperature monitoring</p>
-                <ul class="facility-specs">
-                    <li><strong>Fleet Size:</strong> 15 trucks</li>
-                    <li><strong>Capacity:</strong> 6-8 m³ per truck</li>
-                    <li><strong>Tracking:</strong> Real-time GPS</li>
-                    <li><strong>Monitoring:</strong> Temperature sensors</li>
-                </ul>
-            </div>
-            
-            <div class="facility-card">
-                <div class="facility-icon">📦</div>
-                <h3>Material Storage</h3>
-                <p>Climate-controlled silos for optimal material preservation</p>
-                <ul class="facility-specs">
-                    <li><strong>Cement:</strong> 200 tons capacity</li>
-                    <li><strong>Aggregates:</strong> 500 tons capacity</li>
-                    <li><strong>Protection:</strong> Weather-sealed</li>
-                    <li><strong>Quality:</strong> Moisture controlled</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PRODUCTION PROCESS SECTION -->
-<section class="section-light">
-    <div class="container">
-        <h2 class="section-title center">From Plant to Site</h2>
-        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
-            Our proven 6-step process ensures quality and on-time delivery
-        </p>
-        <div class="process-timeline">
-            <div class="process-step">
-                <div class="step-number">1</div>
-                <h4>Order & Spec</h4>
-                <p>Technical requirements analysis</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">2</div>
-                <h4>Mix Design</h4>
-                <p>Lab formulation</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">3</div>
-                <h4>Quality Control</h4>
-                <p>Testing standards</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">4</div>
-                <h4>Production</h4>
-                <p>Automated batching</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">5</div>
-                <h4>Delivery</h4>
-                <p>On-time to site</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">6</div>
-                <h4>Support</h4>
-                <p>Technical assistance</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- REFERENCE PROJECTS SECTION -->
-<section id="projects" class="section-gray">
-    <div class="container">
-        <h2 class="section-title center">Major Projects by Halt Construction</h2>
-        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; color: var(--gray);">
-            Real projects completed by our parent company Halt Construction
-        </p>
+        
         <div class="projects-grid">
             <!-- Project 1: Heramous Residence -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="dmix-image/projet residence 1 (2).jpeg" alt="Heramous Residence Modern Apartment Complex in Djibouti">
+                    <img src="dmix-image/projet residence 1.jpeg" alt="Heramous Residence">
                     <span class="project-tag">Residential</span>
                 </div>
                 <div class="project-info">
                     <h3>Heramous Residence</h3>
-                    <p>Modern upscale residential complex in the Heron district of Djibouti with 12 units including T2, T3 and T4 apartments built to international standards.</p>
+                    <p>Modern upscale residential complex in Heron district with 120 units including T2, T3 and T4 apartments built to international standards.</p>
                     <div class="gallery-grid">
-                        <img src="dmix-image/projet residence 1.jpeg" alt="Heramous Residence Interior Design" class="gallery-image">
-                        <img src="dmix-image/projet residence 3.jpeg" alt="Heramous Residence Building Facade" class="gallery-image">
+                        <img src="dmix-image/projet residence 1.jpeg" alt="Heramous Interior" class="gallery-image">
+                        <img src="dmix-image/projet residence 3.jpeg" alt="Heramous Facade" class="gallery-image">
                     </div>
                     <div class="project-meta">
                         <span>📍 Heramous District</span>
-                        <span class="project-volume">12 Units</span>
+                        <span class="project-volume">120 Units</span>
                     </div>
                 </div>
             </div>
@@ -1124,15 +1219,15 @@
             <!-- Project 2: Grand Bara Solar -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="dmix-image/projet solaire Grand Bara (13).jpeg" alt="Grand Bara Solar Power Plant in Djibouti">
+                    <img src="dmix-image/projet solaire Grand Bara (13).jpeg" alt="Grand Bara Solar">
                     <span class="project-tag">Energy</span>
                 </div>
                 <div class="project-info">
                     <h3>Grand Bara Solar</h3>
-                    <p>Large-scale photovoltaic power plant producing several megawatts of clean electricity, contributing significantly to Djibouti's sustainable development goals.</p>
+                    <p>Large-scale photovoltaic power plant producing megawatts of clean electricity, contributing to Djibouti's sustainable development goals.</p>
                     <div class="gallery-grid">
-                        <img src="dmix-image/projet solaire Grand Bara (15).jpeg" alt="Solar Panel Installation at Grand Bara" class="gallery-image">
-                        <img src="dmix-image/projet solaire Grand Bara (16).jpeg" alt="Grand Bara Solar Plant Infrastructure" class="gallery-image">
+                        <img src="dmix-image/projet solaire Grand Bara (15).jpeg" alt="Solar Installation" class="gallery-image">
+                        <img src="dmix-image/projet solaire Grand Bara (16).jpeg" alt="Solar Infrastructure" class="gallery-image">
                     </div>
                     <div class="project-meta">
                         <span>📍 Grand Bara Region</span>
@@ -1144,15 +1239,15 @@
             <!-- Project 3: Mall PK 12 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="dmix-image/projet mall PK 12 (1).jpeg" alt="Mall PK 12 Shopping Center Djibouti">
+                    <img src="dmix-image/projet mall PK 12 (1).jpeg" alt="Mall PK 12">
                     <span class="project-tag">Commercial</span>
                 </div>
                 <div class="project-info">
                     <h3>Mall PK 12</h3>
-                    <p>Modern 15,000 m² shopping center at kilometer 12 with shops, restaurants, leisure spaces and 200-space parking lot. Essential shopping destination.</p>
+                    <p>Modern 15,000 m² shopping center with shops, restaurants, leisure spaces and 200-space parking lot. Essential shopping destination.</p>
                     <div class="gallery-grid">
-                        <img src="dmix-image/projet mall PK 12 (5).jpeg" alt="Mall PK 12 Interior Shopping Area" class="gallery-image">
-                        <img src="dmix-image/projet mall PK 12 (7).jpeg" alt="Mall PK 12 Parking and Exterior" class="gallery-image">
+                        <img src="dmix-image/projet mall PK 12 (5).jpeg" alt="Mall Interior" class="gallery-image">
+                        <img src="dmix-image/projet mall PK 12 (7).jpeg" alt="Mall Parking" class="gallery-image">
                     </div>
                     <div class="project-meta">
                         <span>📍 Km 12 Road</span>
@@ -1197,17 +1292,12 @@
                     <option value="C30/37">C30/37 - Heavy-duty applications</option>
                     <option value="C35/45">C35/45 - Infrastructure projects</option>
                     <option value="C40/50">C40/50 - Marine structures</option>
-                    <option value="self-compacting">Self-compacting concrete</option>
                     <option value="custom">Custom formulation</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="volume">Estimated Volume (m³) *</label>
                 <input type="number" id="volume" name="volume" min="1" required>
-            </div>
-            <div class="form-group">
-                <label for="delivery-date">Required Delivery Date</label>
-                <input type="date" id="delivery-date" name="delivery-date">
             </div>
             <div class="form-group">
                 <label for="project">Project Details</label>
@@ -1223,7 +1313,7 @@
     <div class="container">
         <div class="footer-grid">
             <div>
-                <img src="images/DMIX.png" alt="D-MIX Concrete Plant - Halt Group Subsidiary" style="height: 40px; margin-bottom: 1rem;">
+                <img src="images/DMIX.png" alt="D-MIX Logo" style="height: 40px; margin-bottom: 1rem;">
                 <h3>D-MIX Concrete Plant</h3>
                 <p>Premium ready-mix concrete supplier in Djibouti. Part of Halt Group since 2007.</p>
             </div>
@@ -1232,7 +1322,6 @@
                 <p><a href="#about">About Us</a></p>
                 <p><a href="#concrete-types">Products</a></p>
                 <p><a href="#projects">Our Projects</a></p>
-                <p><a href="#facility">Our Facility</a></p>
                 <p><a href="#contact">Get Quote</a></p>
             </div>
             <div>
@@ -1240,13 +1329,12 @@
                 <p><a href="#concrete-types">Standard Concrete (C20-C30)</a></p>
                 <p><a href="#concrete-types">High-Performance (C35-C40)</a></p>
                 <p><a href="#concrete-types">Specialized Mix</a></p>
-                <p><a href="#contact">Custom Formulations</a></p>
             </div>
             <div>
                 <h3>Contact Info</h3>
                 <p>Halt Office Building<br>Heron, Djibouti</p>
                 <p>Phone: +253 21 35 44 14</p>
-                <p>Email: dmix@haltgroup-djibouti.com</p>
+                <p>Email: contact@dmix-djibouti.com</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1257,7 +1345,103 @@
 
 <!-- JAVASCRIPT -->
 <script>
-// Smooth scroll for navigation links
+// ============================================
+// HERO SLIDER
+// ============================================
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.slider-dot');
+const totalSlides = slides.length;
+
+function showSlide(n) {
+    // Remove active class from all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Handle slide index wrapping
+    if (n >= totalSlides) currentSlide = 0;
+    if (n < 0) currentSlide = totalSlides - 1;
+    
+    // Show current slide
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction) {
+    currentSlide += direction;
+    showSlide(currentSlide);
+}
+
+function goToSlide(n) {
+    currentSlide = n;
+    showSlide(currentSlide);
+}
+
+// Auto-advance slides every 5 seconds
+setInterval(() => {
+    changeSlide(1);
+}, 5000);
+
+// ============================================
+// ANIMATED COUNTERS
+// ============================================
+const counters = document.querySelectorAll('.stat-number');
+let hasAnimated = false;
+
+function animateCounters() {
+    if (hasAnimated) return;
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.floor(current).toLocaleString();
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target.toLocaleString();
+            }
+        };
+        
+        updateCounter();
+    });
+    
+    hasAnimated = true;
+}
+
+// Trigger counter animation when stats section is visible
+const statsSection = document.querySelector('.stats-section');
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+        }
+    });
+}, { threshold: 0.5 });
+
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
+
+// ============================================
+// HEADER SCROLL EFFECT
+// ============================================
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// ============================================
+// SMOOTH SCROLL
+// ============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1271,38 +1455,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form validation
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        
-        // Simple validation
-        let isValid = true;
-        const requiredFields = this.querySelectorAll('[required]');
-        
-        requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-                isValid = false;
-                field.style.borderColor = 'red';
-            } else {
-                field.style.borderColor = '#E0E0E0';
-            }
-        });
-        
-        if (isValid) {
-            alert('Thank you for your request! We will contact you within 24 hours.');
-            this.reset();
-        } else {
-            alert('Please fill in all required fields.');
-        }
-    });
-}
-
-// Add animation on scroll
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -1318,12 +1473,41 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.type-card, .cert-card, .facility-card, .project-card').forEach(el => {
+document.querySelectorAll('.type-card, .project-card, .feature-item').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease-out';
     observer.observe(el);
 });
+
+// ============================================
+// FORM HANDLING
+// ============================================
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let isValid = true;
+        const requiredFields = this.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                isValid = false;
+                field.style.borderColor = 'var(--primary-red)';
+            } else {
+                field.style.borderColor = '#E0E0E0';
+            }
+        });
+        
+        if (isValid) {
+            alert('Thank you for your request! We will contact you within 24 hours.');
+            this.reset();
+        } else {
+            alert('Please fill in all required fields.');
+        }
+    });
+}
 </script>
 
 </body>
